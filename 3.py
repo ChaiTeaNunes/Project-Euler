@@ -1,21 +1,10 @@
 # Largest Prime Factor
-def is_prime(n):
-   for i in range(2, n-1):
-      if n % i == 0:
-         return False
-   return True
-   
-def factors(n):
-   output = tuple()
-   if is_prime(n):
-      output += (n,)
-   else:
-      for i in range(2, n-1):
-         if n % i == 0:
-            output += factors(i)
-            n /= i
-            output += factors(n)
-   return output
-         
+def largest_prime(n):
+   i = 2
+   while i**2 < n:
+      while n % i == 0:
+         n /= i
+      i += 1
+   return n
 
-print(set(factors(13195)))
+print(largest_prime(600851475143))
