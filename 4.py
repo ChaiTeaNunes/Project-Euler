@@ -14,4 +14,4 @@ def largest_palindrome(digits=3):
             del temp
     return output
 
-largest_palindrome()
+print(largest_palindrome())
