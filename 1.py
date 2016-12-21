@@ -12,7 +12,7 @@ def is_of_5(n):
     return False
     
 for i in range(0, 1000):
-   if is_of_3(i) or is_of_5(i):
-      sum += i
+    if is_of_3(i) or is_of_5(i):
+        sum += i
 
 print(sum)
