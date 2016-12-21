@@ -1,6 +1,6 @@
 # Largest Palindrome Product
-def largest_palindrome():
-    start, end = 100, 1000
+def largest_palindrome(digits=3):
+    start, end = 10**(digits - 1), 10**digits
     value, output = 0, 0
     
     for i in range(start, end):
@@ -12,6 +12,6 @@ def largest_palindrome():
             if temp == str(value) and value >= output:
                 output = value
             del temp
-    print(output)
+    return output
 
 largest_palindrome()
