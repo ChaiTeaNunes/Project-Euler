@@ -6,6 +6,6 @@ def smallest_multiple():
         output % 13 == 0 and output % 11 == 0 and \
         output % 9 == 0 and output % 7 == 0):
             output += 20
-    print(output)
+    return output
 
-smallest_multiple()
+print(smallest_multiple())
