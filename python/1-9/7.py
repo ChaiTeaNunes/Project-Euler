@@ -19,6 +19,6 @@ def get_prime_list(n):
     return prime_list
 
 def nth_prime(n):
-    return get_prime_list(n)[n - 1]
+    return get_prime_list(n)[-1]
 
 print(nth_prime(10001))
