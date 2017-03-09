@@ -17,6 +17,15 @@ def find_triple_sum(n):
             if a > b:
                 a, b = b, a
             if triple_sum(a, b, c) == n:
-                return str(a) + ", " + str(b) + ", " + str(c)
+                return [a, b, c]
 
-print(find_triple_sum(1000))
+def triple_product(n):
+    triple_list = find_triple_sum(n)
+    result = 1
+    if triple_list is not None:
+        for i in triple_list:
+            result *= i
+        return result
+    return -1
+
+print(triple_product(1000))
