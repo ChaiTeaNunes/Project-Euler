@@ -1,12 +1,10 @@
 # Multiples of 3 and 5
-def sum_of_multiples(end, *args):
-    sum, counter = 0, 0
-    while counter < end:
-        for arg in args:
-            if i % arg == 0:
-                sum += i
-                break
-        counter += 1
-    return sum
+def multiples(x, y, n):
+    result = 0
+    for i in range(n):
+        if i % x != 0 and i % y != 0:
+            result += i
+    return result
 
-print(sum_of_multiples(1000, 3, 5))
+
+print(multiples(3, 5, 1000))
